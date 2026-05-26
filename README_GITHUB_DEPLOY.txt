@@ -1,7 +1,11 @@
-AI CAMERA Mobile V3 Universal ROI
+AI CAMERA Mobile V9 PaddleOCR Only Diagnostic
 
-Upload these files to GitHub repository root:
+Upload to GitHub root:
 - index.html
-- AI_CAMERA_JP_LINE_MEMORY_V7.json
+- standard_texts.json
 
-Enable GitHub Pages from main/root. Open with iPhone Safari HTTPS URL.
+Changes:
+- Removed Tesseract fallback because it was slow and generated unstable OCR overlays.
+- Uses PaddleOCR.js only. If PaddleOCR.js fails to load, it shows a quick red ROI box instead of waiting 7-10 seconds.
+- Crops upper product text ROI before OCR and downscales to max width 760px.
+- The middle button shows small version label V9.
